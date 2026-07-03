@@ -1,0 +1,433 @@
+/* ===========================================================
+   PT. JAVA ESSENCE EXPORT — Landing Page
+   Palette diambil dari desain Figma:
+   - Teal utama   : #007D63
+   - Teal gelap   : #0B4A3C
+   - Navy teks    : #16324F
+   - Gelap netral : #2B2B2B
+   - Abu terang   : #EDEDED
+=========================================================== */
+
+:root {
+  --teal: #007D63;
+  --teal-dark: #0B4A3C;
+  --teal-light: #A9CFC0;
+  --navy: #16324F;
+  --dark: #2B2B2B;
+  --dark-soft: #35342F;
+  --bg-light: #EEEEEC;
+  --white: #FFFFFF;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Poppins', sans-serif;
+  --radius: 16px;
+  --max-width: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background: var(--bg-light);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: 0.03em;
+  color: var(--dark);
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-title--left { text-align: left; }
+.section-title--center { text-align: center; margin-bottom: 8px; }
+.text-accent { color: var(--teal); }
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border: none;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-2px); opacity: 0.92; }
+.btn--dark { background: var(--dark-soft); color: var(--white); }
+
+/* ===========================================================
+   NAVBAR
+=========================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.navbar__logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.navbar__nav {
+  display: none;
+  gap: 32px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.navbar__right { display: flex; align-items: center; gap: 12px; }
+
+.navbar__right .btn { padding: 9px 20px; font-size: 0.7rem; }
+
+.navbar__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 28px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.navbar__toggle span {
+  display: block;
+  height: 2px;
+  background: var(--dark);
+  border-radius: 2px;
+}
+
+/* Mobile dropdown nav */
+.navbar__nav.is-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  padding: 16px 20px;
+  gap: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ===========================================================
+   HERO (video background)
+=========================================================== */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 100px 24px 60px;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    160deg,
+    rgba(11, 74, 60, 0.82) 0%,
+    rgba(0, 125, 99, 0.55) 45%,
+    rgba(169, 207, 192, 0.55) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero__logo { width: 64px; height: 64px; opacity: 0.95; }
+.hero__logo img { width: 100%; height: 100%; object-fit: contain; }
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.2;
+  color: var(--navy);
+  text-shadow: 0 2px 12px rgba(255,255,255,0.25);
+}
+
+.hero__subtitle {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--navy);
+  max-width: 480px;
+}
+
+/* ===========================================================
+   WHY CHOOSE US
+=========================================================== */
+.why-choose {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.why-choose__grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.why-choose__box {
+  background: var(--teal);
+  border-radius: var(--radius);
+  min-height: 96px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--white);
+}
+
+.why-choose__icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+}
+
+.why-choose__text {
+  flex: 1;
+  min-height: 1.2em;
+}
+
+/* ===========================================================
+   PRODUCT CATEGORIES
+=========================================================== */
+.products {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 24px 70px;
+}
+
+.products__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.product-card {
+  background: var(--dark-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  color: var(--white);
+}
+
+.product-card__image {
+  aspect-ratio: 4 / 3;
+  background: #4a4640;
+  overflow: hidden;
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__body { padding: 16px; }
+
+.product-card__label {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--teal-light);
+  margin-bottom: 6px;
+}
+
+.product-card__desc {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ===========================================================
+   PARTNERSHIP
+=========================================================== */
+.partnership {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 24px 0;
+}
+
+.partnership__grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  text-align: center;
+}
+
+.partnership__step h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.partnership__step p {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #6b6b6b;
+}
+
+.partnership__banner {
+  margin-top: 46px;
+  background: var(--teal);
+  color: var(--white);
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  padding: 26px 20px;
+}
+
+/* ===========================================================
+   CONTACT / FOOTER BAR
+=========================================================== */
+.contact-bar {
+  background: var(--dark-soft);
+  color: var(--white);
+  padding: 22px 24px;
+}
+
+.contact-bar__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.contact-bar__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--teal-light);
+}
+
+.contact-bar__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.contact-bar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #E8B84B;
+}
+
+/* ===========================================================
+   RESPONSIVE — TABLET & DESKTOP
+=========================================================== */
+@media (min-width: 768px) {
+  .navbar__nav { display: flex; }
+  .navbar__toggle { display: none; }
+
+  .why-choose__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products__header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .partnership__grid {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+
+  .partnership__banner { font-size: 0.95rem; }
+
+  .contact-bar__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .contact-bar__info {
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  .contact-bar__item { justify-content: flex-start; }
+}
+
+@media (min-width: 1024px) {
+  .hero { padding-top: 130px; }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn:hover { transform: none; }
+}

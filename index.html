@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT. Java Essence Export | Indonesian Teak Wood Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============ HEADER / NAVBAR ============ -->
+    <header class="navbar">
+      <div class="navbar__inner">
+        <a href="#hero" class="navbar__logo">PT. Java Essence Export</a>
+
+        <nav class="navbar__nav">
+          <a href="#products">Catalog</a>
+          <a href="#partnership">About Us</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+
+        <div class="navbar__right">
+          <a href="#hero" class="btn btn--dark">HOME</a>
+          <button class="navbar__toggle" id="navToggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ HERO with VIDEO BACKGROUND ============ -->
+    <section class="hero" id="hero">
+      <!-- 
+      VIDEO BACKGROUND
+      Ganti "assets/video/hero-bg.mp4" dengan file video Anda.
+      poster = gambar yang tampil sebelum video termuat.
+    -->
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="assets/images/hero-poster.jpg"
+      >
+        <source src="video/background.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <div class="hero__logo">
+          <!-- Ganti dengan logo asli PT. Java Essence Export -->
+          <img src="img/logosmall.png" alt="PT. Java Essence Export Logo" />
+        </div>
+
+        <h1 class="hero__title">CRAFTED BY NATURE,<br />TRUSTED WORLDWIDE</h1>
+
+        <p class="hero__subtitle">
+          Your trusted OEM and private label partner for sourcing premium
+          Indonesian teak wood products and delivering them to international
+          markets with reliability and professionalism.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="why-choose" id="why-choose">
+      <h2 class="section-title">
+        WHY <span class="text-accent">CHOOSE US</span>
+      </h2>
+
+      <div class="why-choose__grid">
+        <!-- 
+        6 KOTAK "WHY CHOOSE US"
+        Silakan isi ikon (SVG/gambar) dan teks sendiri di dalam setiap .why-choose__box
+        Struktur .why-choose__icon dan .why-choose__text sudah disiapkan supaya rapi.
+      -->
+        <div class="why-choose__box">
+          <div class="why-choose__icon"><!-- icon di sini --></div>
+          <div class="why-choose__text"><!-- teks di sini --></div>
+        </div>
+        <div class="why-choose__box">
+          <div class="why-choose__icon"></div>
+          <div class="why-choose__text"></div>
+        </div>
+        <div class="why-choose__box">
+          <div class="why-choose__icon"></div>
+          <div class="why-choose__text"></div>
+        </div>
+        <div class="why-choose__box">
+          <div class="why-choose__icon"></div>
+          <div class="why-choose__text"></div>
+        </div>
+        <div class="why-choose__box">
+          <div class="why-choose__icon"></div>
+          <div class="why-choose__text"></div>
+        </div>
+        <div class="why-choose__box">
+          <div class="why-choose__icon"></div>
+          <div class="why-choose__text"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPORT PRODUCT CATEGORIES ============ -->
+    <section class="products" id="products">
+      <div class="products__header">
+        <h2 class="section-title section-title--left">
+          OUR EXPORT PRODUCT<br /><span class="text-accent">CATEGORIES</span>
+        </h2>
+        <a href="#" class="btn btn--dark">VIEW ALL PRODUCTS</a>
+      </div>
+
+      <div class="products__grid">
+        <article class="product-card">
+          <div class="product-card__image">
+            <!-- Ganti background-image di style.css atau pakai <img> di sini -->
+            <img
+              src="assets/images/kitchenware.jpg"
+              alt="Kitchenware products"
+            />
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__label">Kitchenware</span>
+            <p class="product-card__desc">
+              Wood spoons, serving bowls, mat, cutlery, wooden rolling pin,
+              serving spoons, and utensils.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/furniture.jpg" alt="Furniture products" />
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__label">Furniture</span>
+            <p class="product-card__desc">
+              Dining tables, coffee tables, chairs, sideboards, crafted with
+              solid teak and mango wood.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/home-decor.jpg" alt="Home decor products" />
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__label">Home Decor</span>
+            <p class="product-card__desc">
+              Wood carved storage, decorative bowls, vases, wall hangings,
+              candle holders, and figurines.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LET'S BUILD PARTNERSHIP ============ -->
+    <section class="partnership" id="partnership">
+      <h2 class="section-title section-title--center">
+        LET'S BUILD PARTNERSHIP
+      </h2>
+
+      <div class="partnership__grid">
+        <div class="partnership__step">
+          <h3>Request Product Catalog</h3>
+          <p>
+            Comprehensive product listings with specifications, pricing, and
+            available customization options. Updated quarterly with new designs.
+          </p>
+        </div>
+        <div class="partnership__step">
+          <h3>Obtain Quotation</h3>
+          <p>
+            Custom quotes based on your order quantities, specifications, and
+            destination. Transparent pricing with no hidden charges.
+          </p>
+        </div>
+        <div class="partnership__step">
+          <h3>Confirm &amp; Ship Order</h3>
+          <p>
+            Finalize your order details, secure payment terms, and we handle
+            production, quality control, and export shipping.
+          </p>
+        </div>
+      </div>
+
+      <div class="partnership__banner">
+        We are not just a supplier — we are your long-term partner in building a
+        scalable and competitive product line in the global market.
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / FOOTER ============ -->
+    <footer class="contact-bar" id="contact">
+      <div class="contact-bar__inner">
+        <span class="contact-bar__title">CONTACT US TODAY :</span>
+
+        <div class="contact-bar__info">
+          <span class="contact-bar__item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12 2 1 21h22L12 2zm0 4.8L19.5 19h-15L12 6.8zM11 10h2v5h-2zm0 6h2v2h-2z"
+              />
+            </svg>
+            We fast response within 24 hours
+          </span>
+          <span class="contact-bar__item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12 2 1 21h22L12 2zm0 4.8L19.5 19h-15L12 6.8zM11 10h2v5h-2zm0 6h2v2h-2z"
+              />
+            </svg>
+            Reach us anytime through WhatsApp / Line
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
